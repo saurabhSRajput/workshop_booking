@@ -7,6 +7,11 @@
   overflow: hidden;
 }
 
+@keyframes slowZoom {
+  from { transform: scale(1.05); }
+  to { transform: scale(1.0); }
+}
+
 .hero__bg {
   position: absolute;
   inset: 0;
@@ -15,11 +20,7 @@
   background-position: center 30%;
   z-index: 0;
   transform: scale(1.05);
-  transition: transform 8s ease;
-}
-
-.hero:hover .hero__bg {
-  transform: scale(1.0);
+  animation: slowZoom 7s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
 }
 
 .hero__overlay {
