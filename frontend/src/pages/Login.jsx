@@ -108,7 +108,7 @@ export default function Login() {
                         name="name"
                         value={form.name}
                         onChange={handle}
-                        placeholder="e.g. Avani Dewan"
+                        placeholder="e.g. Jane Doe"
                         className="form-input auth__input"
                         required
                       />

@@ -115,8 +115,8 @@ export const mockStats = {
 
 export const mockUser = {
   id: 1,
-  name: "Avani Dewan",
-  email: "avani.dewan@iitb.ac.in",
+  name: "Coordinator Name",
+  email: "coordinator@iitb.ac.in",
   role: "instructor",
   institution: "IIT Bombay",
   department: "Computer Science",

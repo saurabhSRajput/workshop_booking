@@ -5,6 +5,9 @@ import { mockDashboardWorkshops, mockStats, mockUser } from '../data/mockData';
 import './Dashboard.css';
 
 export default function Dashboard() {
+  const userName = localStorage.getItem('mockUserName') || 'User';
+  const initials = userName.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase() || 'U';
+
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
   const statusIcon = {
@@ -28,7 +31,7 @@ export default function Dashboard() {
         <div className="dash__header">
           <div>
             <h1 className="dash__title">Dashboard</h1>
-            <p className="dash__sub">Welcome back, {mockUser.name} 👋</p>
+            <p className="dash__sub">Welcome back, {userName} 👋</p>
           </div>
           <div className="dash__header-actions">
             <Link to="/propose" className="btn btn-primary">
@@ -125,10 +128,10 @@ export default function Dashboard() {
             {/* User info */}
             <div className="dash__profile-card">
               <div className="dash__profile-avatar">
-                {mockUser.name.split(' ').map(n => n[0]).join('')}
+                {initials}
               </div>
               <div className="dash__profile-info">
-                <div className="dash__profile-name">{mockUser.name}</div>
+                <div className="dash__profile-name">{userName}</div>
                 <div className="dash__profile-role">{mockUser.role}</div>
                 <div className="dash__profile-inst">{mockUser.institution}</div>
               </div>
