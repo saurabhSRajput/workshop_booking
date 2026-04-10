@@ -42,6 +42,6 @@ db.sqlite3
 #Vim
 *.swp
 
-#images/gif
-*.png
-*.gif
+# images/gif (Removed restriction to allow screenshots)
+# *.png
+# *.gif
