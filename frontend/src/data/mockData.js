@@ -1,0 +1,135 @@
+export const mockWorkshops = [
+  {
+    id: 1,
+    title: "Python for Scientific Computing",
+    type: "Python",
+    date: "2026-05-15",
+    duration: "2 days",
+    instructor: "Dr. Prabhu Ramachandran",
+    location: "IIT Bombay, Mumbai",
+    status: "upcoming",
+    participants: 120,
+    maxParticipants: 150,
+    description:
+      "Learn Python fundamentals for scientific computing including NumPy, SciPy and Matplotlib.",
+    tags: ["Python", "NumPy", "SciPy", "Scientific"],
+    color: "#4f8ef7",
+  },
+  {
+    id: 2,
+    title: "Introduction to Scilab",
+    type: "Scilab",
+    date: "2026-04-28",
+    duration: "1 day",
+    instructor: "Prof. Kannan Moudgalya",
+    location: "IIT Bombay, Mumbai",
+    status: "upcoming",
+    participants: 87,
+    maxParticipants: 100,
+    description:
+      "A hands-on workshop on Scilab, the open-source alternative to MATLAB for numerical computation.",
+    tags: ["Scilab", "Numerical", "Open Source"],
+    color: "#7c3aed",
+  },
+  {
+    id: 3,
+    title: "OpenFOAM for CFD Simulations",
+    type: "OpenFOAM",
+    date: "2026-03-10",
+    duration: "3 days",
+    instructor: "Dr. Shivasubramanian Gopalakrishnan",
+    location: "IIT Bombay, Mumbai",
+    status: "completed",
+    participants: 95,
+    maxParticipants: 100,
+    description:
+      "Deep dive into Computational Fluid Dynamics using OpenFOAM for simulation and analysis.",
+    tags: ["CFD", "OpenFOAM", "Simulation"],
+    color: "#10b981",
+  },
+  {
+    id: 4,
+    title: "DWSIM for Chemical Process Simulation",
+    type: "DWSIM",
+    date: "2026-06-04",
+    duration: "2 days",
+    instructor: "Prof. Mithilesh Jha",
+    location: "IIT Bombay, Mumbai",
+    status: "upcoming",
+    participants: 45,
+    maxParticipants: 80,
+    description:
+      "Process simulation and design using DWSIM, the open-source chemical process simulator.",
+    tags: ["Chemical", "DWSIM", "Process Design"],
+    color: "#f59e0b",
+  },
+  {
+    id: 5,
+    title: "Oscad for Circuit Design",
+    type: "Oscad",
+    date: "2026-02-20",
+    duration: "1 day",
+    instructor: "Dr. Rakhi R",
+    location: "IIT Bombay, Mumbai",
+    status: "completed",
+    participants: 110,
+    maxParticipants: 110,
+    description:
+      "Electronic Design Automation using Oscad — an open-source EDA tool for circuit design.",
+    tags: ["EDA", "Circuits", "Oscad"],
+    color: "#ef4444",
+  },
+  {
+    id: 6,
+    title: "R for Statistical Computing",
+    type: "R",
+    date: "2026-06-20",
+    duration: "2 days",
+    instructor: "Prof. Dootika Vats",
+    location: "IIT Bombay, Mumbai",
+    status: "upcoming",
+    participants: 30,
+    maxParticipants: 60,
+    description:
+      "Statistical computing and data visualization using R — a powerful language for data analysis.",
+    tags: ["R", "Statistics", "Data Science"],
+    color: "#06b6d4",
+  },
+];
+
+export const mockWorkshopTypes = [
+  { id: 1, name: "Python", workshops: 24, icon: "🐍", color: "#4f8ef7", description: "Scientific computing with Python ecosystem" },
+  { id: 2, name: "Scilab", workshops: 18, icon: "🔬", color: "#7c3aed", description: "Numerical computation alternative to MATLAB" },
+  { id: 3, name: "OpenFOAM", workshops: 12, icon: "💨", color: "#10b981", description: "Computational fluid dynamics simulations" },
+  { id: 4, name: "DWSIM", workshops: 9, icon: "⚗️", color: "#f59e0b", description: "Chemical process simulation and design" },
+  { id: 5, name: "Oscad", workshops: 15, icon: "⚡", color: "#ef4444", description: "Open-source electronic design automation" },
+  { id: 6, name: "R", workshops: 11, icon: "📊", color: "#06b6d4", description: "Statistical computing and data analysis" },
+];
+
+export const mockStats = {
+  totalWorkshops: 89,
+  totalParticipants: 12847,
+  totalInstructors: 47,
+  satisfactionRate: 96,
+};
+
+export const mockUser = {
+  id: 1,
+  name: "Avani Dewan",
+  email: "avani.dewan@iitb.ac.in",
+  role: "instructor",
+  institution: "IIT Bombay",
+  department: "Computer Science",
+  workshopsProposed: 3,
+  workshopsAttended: 12,
+  activeWorkshops: 1,
+  joinedDate: "2025-09-01",
+};
+
+export const mockDashboardWorkshops = [
+  { id: 1, title: "Python for Scientific Computing", date: "2026-05-15", proposer: "Ravi Shankar, IIT Delhi", status: "pending", participants: 120 },
+  { id: 2, title: "Introduction to Scilab", date: "2026-04-28", proposer: "Anita Mehta, NIT Surat", status: "upcoming", participants: 87 },
+  { id: 3, title: "OpenFOAM for CFD Simulations", date: "2026-03-10", proposer: "Kumar Swami, BITS Pilani", status: "completed", participants: 95 },
+  { id: 4, title: "DWSIM Process Simulation", date: "2026-06-04", proposer: "Priya Singh, IIT Madras", status: "upcoming", participants: 45 },
+  { id: 5, title: "Oscad Circuit Design", date: "2026-02-20", proposer: "Ajay Verma, IIT Kanpur", status: "rejected", participants: 0 },
+];
