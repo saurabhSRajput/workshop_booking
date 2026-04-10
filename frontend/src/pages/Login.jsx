@@ -21,6 +21,7 @@ export default function Login() {
     setTimeout(() => {
       setLoading(false);
       setSuccess(true);
+      localStorage.setItem('mockIsLoggedIn', 'true');
       setTimeout(() => navigate('/dashboard'), 1500);
     }, 1200);
   };

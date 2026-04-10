@@ -8,7 +8,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const location = useLocation();
-  const isLoggedIn = true; // mock state
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -18,6 +18,7 @@ export default function Navbar() {
 
   useEffect(() => {
     setMenuOpen(false);
+    setIsLoggedIn(localStorage.getItem('mockIsLoggedIn') === 'true');
   }, [location]);
 
   return (
@@ -79,7 +80,7 @@ export default function Navbar() {
                     <NavLink to="/profile" className="navbar__dropdown-item">
                       <User size={14} /> Profile
                     </NavLink>
-                    <NavLink to="/login" className="navbar__dropdown-item navbar__dropdown-item--danger">
+                    <NavLink to="/" className="navbar__dropdown-item navbar__dropdown-item--danger" onClick={() => localStorage.removeItem('mockIsLoggedIn')}>
                       <LogIn size={14} /> Logout
                     </NavLink>
                   </div>
@@ -110,7 +111,7 @@ export default function Navbar() {
           {isLoggedIn && <NavLink to="/profile" className="navbar__mobile-link">Profile</NavLink>}
           <div className="navbar__mobile-divider" />
           {isLoggedIn
-            ? <NavLink to="/login" className="navbar__mobile-link navbar__mobile-link--danger">Logout</NavLink>
+            ? <NavLink to="/" className="navbar__mobile-link navbar__mobile-link--danger" onClick={() => localStorage.removeItem('mockIsLoggedIn')}>Logout</NavLink>
             : <>
                 <NavLink to="/login" className="navbar__mobile-link">Login</NavLink>
                 <NavLink to="/register" className="btn btn-primary" style={{ margin: '8px 0', justifyContent: 'center' }}>Register</NavLink>
