@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 // Note: change base to '/workshop_booking/' when deploying to GitHub Pages
 export default defineConfig({
   plugins: [react()],
-  base: '/',
+  base: '/workshop_booking/',
 })
