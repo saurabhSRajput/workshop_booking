@@ -6,7 +6,12 @@ import './Profile.css';
 
 export default function Profile() {
   const [editMode, setEditMode] = useState(false);
-  const [form, setForm] = useState({ name: mockUser.name, email: mockUser.email, institution: mockUser.institution, department: mockUser.department });
+  const [form, setForm] = useState({ 
+    name: localStorage.getItem('mockUserName') || mockUser.name, 
+    email: localStorage.getItem('mockUserEmail') || mockUser.email, 
+    institution: mockUser.institution, 
+    department: mockUser.department 
+  });
 
   useEffect(() => { window.scrollTo(0, 0); }, []);
 

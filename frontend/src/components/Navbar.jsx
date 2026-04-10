@@ -9,6 +9,7 @@ export default function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const location = useLocation();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userName, setUserName] = useState('User');
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -19,7 +20,10 @@ export default function Navbar() {
   useEffect(() => {
     setMenuOpen(false);
     setIsLoggedIn(localStorage.getItem('mockIsLoggedIn') === 'true');
+    setUserName(localStorage.getItem('mockUserName') || 'User');
   }, [location]);
+
+  const initials = userName.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase() || 'U';
 
   return (
     <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
@@ -72,8 +76,8 @@ export default function Navbar() {
                 <span className="navbar__notif-dot" />
               </button>
               <div className="navbar__user" onClick={() => setDropdownOpen(!dropdownOpen)}>
-                <div className="navbar__avatar">AD</div>
-                <span className="navbar__user-name hide-mobile">Avani Dewan</span>
+                <div className="navbar__avatar">{initials}</div>
+                <span className="navbar__user-name hide-mobile">{userName}</span>
                 <ChevronDown size={14} className={`navbar__chevron ${dropdownOpen ? 'navbar__chevron--open' : ''}`} />
                 {dropdownOpen && (
                   <div className="navbar__dropdown">

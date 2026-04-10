@@ -22,6 +22,9 @@ export default function Login() {
       setLoading(false);
       setSuccess(true);
       localStorage.setItem('mockIsLoggedIn', 'true');
+      const mockName = mode === 'register' && form.name ? form.name : form.email.split('@')[0];
+      localStorage.setItem('mockUserName', mockName);
+      localStorage.setItem('mockUserEmail', form.email);
       setTimeout(() => navigate('/dashboard'), 1500);
     }, 1200);
   };
