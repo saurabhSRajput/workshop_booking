@@ -78,4 +78,9 @@ Modernizing the Dashboard tables without losing the "proposer" and "participant"
 ---
 
 ## 📸 Screenshots
-*(Coming Soon: Add your best screenshots here!)*
+
+### Desktop View - Hero Section
+![FOSSEE Hero Section](screenshots/hero_preview.png)
+
+### Desktop View - Workshop Cards
+![FOSSEE Workshops Grid](screenshots/workshops_preview.png)
