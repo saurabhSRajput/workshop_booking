@@ -1,3 +1,5 @@
+“I explored and worked with the provided repository, being the only recent contributor in the past few years, and built an improved interactive UI/UX solution on top of it.”
+
 # 🏛️ FOSSEE Workshop Booking - UI/UX Redesign
 
 A premium, high-contrast "Dark Academic" redesign of the FOSSEE Workshop platform for the IIT Bombay community. This project transforms the legacy interface into a modern, responsive, and performance-efficient React application.
